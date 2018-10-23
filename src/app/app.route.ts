@@ -1,0 +1,22 @@
+import { HomeComponent } from './routes/home/home.component';
+import { CoursesComponent } from './routes/courses/courses.component';
+import { ReviewsComponent } from './routes/reviews/reviews.component';
+import { VclassesComponent } from './routes/vclasses/vclasses.component';
+import { OfficesComponent } from './routes/offices/offices.component';
+import { EbooksComponent } from './routes/ebooks/ebooks.component';
+import  { RouterModule} from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
+
+
+
+const routes=[
+    {path:"",component:HomeComponent},
+    {path:"Courses",component:CoursesComponent},
+    {path:"Reviews",component:ReviewsComponent},
+    {path:"Offices",component:OfficesComponent},
+    {path:"Ebooks",component: EbooksComponent},
+    {path:"VirtualClass",component:VclassesComponent},
+
+];
+
+export const Routemod:ModuleWithProviders=RouterModule.forRoot(routes);

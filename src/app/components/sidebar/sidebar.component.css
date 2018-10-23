@@ -1,0 +1,6 @@
+.sidebar{
+    border: 1px dashed darkblue;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 550px;
+}
