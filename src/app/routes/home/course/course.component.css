@@ -1,0 +1,43 @@
+.course{
+    width: 250px;
+    min-height: 450px;
+    background-color: rgb(212, 219, 230);
+    box-shadow: 3px 3px 5px lightblue;
+    margin: 20px;
+    float: left;
+}
+
+.cimage{
+    height: 180px;
+    width: 100%;
+}
+
+.cimage img{ 
+    height: 100%;
+    width: 100%;
+}
+
+h2{
+    font-family: Arial;
+    color: rgb(2, 2, 46);
+    text-align:center; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+h4{
+    font-family: Agency FB;
+    color: rgb(73, 73, 77);
+    text-align: justify; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+h3{
+    font-family: Courier New, Courier, monospace;
+    color: darkred;
+    text-align: center; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
