@@ -13,6 +13,8 @@ rlist:review[];
         (x:review[])=>{this.rlist=x},
         (y)=>{alert("Error in fetching review")}
      )
+
+    
   }
 
   ngOnInit() {

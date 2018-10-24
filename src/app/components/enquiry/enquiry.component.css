@@ -1,0 +1,16 @@
+.form{
+    padding: 10px;
+    color: darkblue;
+    background-color: rgb(241, 242, 243);
+}
+textarea{
+    height: 149px;
+    width: 90%;
+}
+.errors{
+    background-color: rgb(97, 98, 99);
+    color: whitesmoke;
+    font-family: arial;
+    margin: 10px;
+    padding: 10px;
+}

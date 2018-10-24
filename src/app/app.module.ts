@@ -28,6 +28,7 @@ import { DiscountPipe } from './pipes/discount.pipe';
 import { FormatpricePipe } from './pipes/formatprice.pipe';
 import { FiltercoursePipe } from './pipes/filtercourse.pipe';
 import { ReviewComponent } from './routes/reviews/review/review.component';
+import { EnquiryComponent } from './components/enquiry/enquiry.component';
 
 
 
@@ -49,7 +50,8 @@ import { ReviewComponent } from './routes/reviews/review/review.component';
     DiscountPipe,
     FormatpricePipe,
     FiltercoursePipe,
-    ReviewComponent
+    ReviewComponent,
+    EnquiryComponent
   ],
   imports: [
     BrowserModule, Routemod, FormsModule, HttpClientModule
