@@ -1,0 +1,21 @@
+.review{
+    width: 90%;
+    min-height: 120px;
+    margin: 10px;
+    background-color: rgb(96, 96, 97);
+    color: rgb(253, 253, 253);
+    padding: 10px;
+}
+p{
+    font-family: arial;
+    font-size: 14px;
+    text-align: justify;
+    color: whitesmoke;
+    margin-top: 20px;
+}
+h5{
+    font-family: Courier New, Courier, monospace;
+    color: rgb(251, 237, 237);
+    text-align: right;
+    margin-top: 15px;
+}
