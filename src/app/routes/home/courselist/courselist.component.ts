@@ -8,6 +8,7 @@ import { CourseService } from '../../../services/course.service';
 })
 export class CourselistComponent implements OnInit {
   clist:course[];
+  pricetype:string="All";
 
   constructor(private cs:CourseService) {
        this.clist=cs.getCourses();

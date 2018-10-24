@@ -1,2 +1,10 @@
-<app-course *ngFor="let x of clist"
+<div class="alert alert-info">
+    <select [(ngModel)]="pricetype">
+        <option>High Price</option>
+        <option>Moderate Price</option>
+        <option>Low Price</option>
+        <option>All</option>
+    </select>
+</div>
+<app-course *ngFor="let x of clist | filtercourse:pricetype"
 [course]="x"></app-course>

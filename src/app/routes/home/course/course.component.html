@@ -2,7 +2,10 @@
     <div class="cimage">
       <img src="../../../../assets/images/{{current.image}}">
     </div>
-    <h2>{{current.name}}</h2>
+    <h2>{{current.name | uppercase}}</h2>
     <h5>{{current.description}}</h5>
-    <h4>Price:: {{current.price}}</h4>
+    <h6>Price:: {{current.price | discount | currency:'INR' 
+      |formatprice: current.price}}
+        <del> ({{current.price | currency:'INR'}})</del>
+    </h6>
 </div>

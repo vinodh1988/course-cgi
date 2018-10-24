@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {Routemod} from './app.route';
-
+import {FormsModule} from '@angular/forms';
 import {CourseService} from './services/course.service';
 import { AppComponent } from './app.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
@@ -16,6 +16,10 @@ import { OfficesComponent } from './routes/offices/offices.component';
 import { EbooksComponent } from './routes/ebooks/ebooks.component';
 import { CourselistComponent } from './routes/home/courselist/courselist.component';
 import { CourseComponent } from './routes/home/course/course.component';
+import { DiscountPipe } from './pipes/discount.pipe';
+import { FormatpricePipe } from './pipes/formatprice.pipe';
+import { FiltercoursePipe } from './pipes/filtercourse.pipe';
+
 
 
 @NgModule({
@@ -32,10 +36,13 @@ import { CourseComponent } from './routes/home/course/course.component';
     OfficesComponent,
     EbooksComponent,
     CourselistComponent,
-    CourseComponent
+    CourseComponent,
+    DiscountPipe,
+    FormatpricePipe,
+    FiltercoursePipe
   ],
   imports: [
-    BrowserModule, Routemod
+    BrowserModule, Routemod, FormsModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
