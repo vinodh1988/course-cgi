@@ -45,13 +45,13 @@ private courselist:course[];
             name:"React",
             description:"Popular framework by Facebook",
             price: 21000,
-            image: "react.jpg"
+            image: "react.png"
           },
           {
             name:"Red hat Linux",
             description:"Enterprise linux server",
             price: 14000,
-            image: "redhat.jpg"
+            image: "redhat.png"
           },
           {
             name:"SQL",
