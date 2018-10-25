@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {Routemod} from './app.route';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 /*imports for http and translation*/
 
@@ -37,6 +37,8 @@ import { ReviewComponent } from './routes/reviews/review/review.component';
 import { EnquiryComponent } from './components/enquiry/enquiry.component';
 import { CoursedetailsComponent } from './components/coursedetails/coursedetails.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { OfferDirective } from './directives/offer.directive';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -65,10 +67,13 @@ export function createTranslateLoader(http: HttpClient) {
     ReviewComponent,
     EnquiryComponent,
     CoursedetailsComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    HighlightDirective,
+    OfferDirective
   ],
   imports: [
-    BrowserModule, Routemod, FormsModule, HttpClientModule,
+    BrowserModule, Routemod, FormsModule, ReactiveFormsModule,
+    HttpClientModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

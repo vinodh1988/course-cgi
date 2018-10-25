@@ -11,3 +11,30 @@
     float: left;
     width: 27%;
 }
+
+
+.cover{
+    position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    background-color: black;
+    z-index: 2;
+}
+
+
+.banner{
+    position: fixed;
+    background-color: lightgreen;
+    padding: 50px;
+    font-size: 45px;
+    font-family: Agency FB;
+    color: rgb(240, 34, 34);
+    top: 20%;
+    left: 30%;
+    height: 300px;
+    width: 500px;
+    text-align: center;
+    z-index: 3;
+}

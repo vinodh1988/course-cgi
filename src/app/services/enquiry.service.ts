@@ -4,6 +4,9 @@ import {Observable} from 'rxjs';
 
 @Injectable()
 export class EnquiryService {
+  isOffer:boolean=true;
+
+
 httpOptions;
   constructor(private http:HttpClient) {
     this.httpOptions = {
@@ -20,5 +23,7 @@ httpOptions;
     obj,
     this.httpOptions);
   }
+
+  
 
 }
