@@ -6,7 +6,7 @@ import { OfficesComponent } from './routes/offices/offices.component';
 import { EbooksComponent } from './routes/ebooks/ebooks.component';
 import  { RouterModule} from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
-
+import {CoursedetailsComponent} from './components/coursedetails/coursedetails.component'
 
 
 const routes=[
@@ -16,7 +16,12 @@ const routes=[
     {path:"Offices",component:OfficesComponent},
     {path:"Ebooks",component: EbooksComponent},
     {path:"VirtualClass",component:VclassesComponent},
-
+    {path:"CDetails/:ccode",component:CoursedetailsComponent}
 ];
+
+
+
+
+
 
 export const Routemod:ModuleWithProviders=RouterModule.forRoot(routes);
