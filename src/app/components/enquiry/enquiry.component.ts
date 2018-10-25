@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EnquiryService } from '../../services/enquiry.service';
 
 @Component({
   selector: 'app-enquiry',
@@ -11,7 +12,8 @@ errors:string[]=[];
 name:string;
 message:string;
 email:string;
-  constructor() { }
+image:string="Sending.gif";
+  constructor(private es:EnquiryService) { }
 
   ngOnInit() {
   }
@@ -37,6 +39,31 @@ email:string;
     if(this.errors.length==0)
      {
        this.active=false;
+       this.image="Sending.gif";
+       let obj={
+         name: this.name,
+         message:this.message,
+         email: this.email
+       }
+
+       this.es.postEnquiry(obj).subscribe(
+         ()=>{
+             this.image="sent.gif";
+            setTimeout(()=>{
+              this.active=true;
+              this.name="";
+              this.message="";
+              this.email="";
+            },2000);
+         },
+         ()=>{
+           this.name="";
+           this.message="";
+           this.email="";
+           alert("Not able to post your enquiry");
+           this.active=true;
+         }
+       )
      }
   }
 

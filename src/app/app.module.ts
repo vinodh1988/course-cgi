@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 import {CourseService} from './services/course.service';
 import {ReviewService} from './services/review.service'
+import {EnquiryService } from './services/enquiry.service'
 
 import { AppComponent } from './app.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
@@ -56,7 +57,7 @@ import { EnquiryComponent } from './components/enquiry/enquiry.component';
   imports: [
     BrowserModule, Routemod, FormsModule, HttpClientModule
   ],
-  providers: [CourseService,ReviewService],
+  providers: [CourseService,ReviewService,EnquiryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
