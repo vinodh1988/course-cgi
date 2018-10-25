@@ -3,7 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {Routemod} from './app.route';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+
+/*imports for http and translation*/
+
+import {HttpClientModule,HttpClient} from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 import {CourseService} from './services/course.service';
@@ -32,6 +37,10 @@ import { ReviewComponent } from './routes/reviews/review/review.component';
 import { EnquiryComponent } from './components/enquiry/enquiry.component';
 
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -55,7 +64,14 @@ import { EnquiryComponent } from './components/enquiry/enquiry.component';
     EnquiryComponent
   ],
   imports: [
-    BrowserModule, Routemod, FormsModule, HttpClientModule
+    BrowserModule, Routemod, FormsModule, HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: (createTranslateLoader),
+          deps: [HttpClient]
+      }
+    })
   ],
   providers: [CourseService,ReviewService,EnquiryService],
   bootstrap: [AppComponent]
