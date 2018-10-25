@@ -36,6 +36,7 @@ import { FiltercoursePipe } from './pipes/filtercourse.pipe';
 import { ReviewComponent } from './routes/reviews/review/review.component';
 import { EnquiryComponent } from './components/enquiry/enquiry.component';
 import { CoursedetailsComponent } from './components/coursedetails/coursedetails.component';
+import { ScheduleComponent } from './components/schedule/schedule.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -63,7 +64,8 @@ export function createTranslateLoader(http: HttpClient) {
     FiltercoursePipe,
     ReviewComponent,
     EnquiryComponent,
-    CoursedetailsComponent
+    CoursedetailsComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule, Routemod, FormsModule, HttpClientModule,

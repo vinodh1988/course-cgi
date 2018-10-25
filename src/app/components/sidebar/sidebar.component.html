@@ -1,3 +1,13 @@
 <div class="sidebar">
+  <a class="btn btn-info"
+  [routerLink]=
+  "[{ outlets: { sidebar: ['Schedules'] } }]"
+  >
+    Upcoming Schedules
+  </a>
+
+  <router-outlet name="sidebar"></router-outlet>
+  <br>
   <app-enquiry></app-enquiry>
 </div>
+

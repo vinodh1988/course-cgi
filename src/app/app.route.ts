@@ -7,7 +7,7 @@ import { EbooksComponent } from './routes/ebooks/ebooks.component';
 import  { RouterModule} from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import {CoursedetailsComponent} from './components/coursedetails/coursedetails.component'
-
+import {ScheduleComponent} from './components/schedule/schedule.component'
 
 const routes=[
     {path:"",component:HomeComponent},
@@ -16,7 +16,8 @@ const routes=[
     {path:"Offices",component:OfficesComponent},
     {path:"Ebooks",component: EbooksComponent},
     {path:"VirtualClass",component:VclassesComponent},
-    {path:"CDetails/:ccode",component:CoursedetailsComponent}
+    {path:"CDetails/:ccode",component:CoursedetailsComponent},
+    {path:"Schedules",component:ScheduleComponent,outlet:"sidebar"}
 ];
 
 
